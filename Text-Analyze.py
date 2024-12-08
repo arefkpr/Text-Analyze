@@ -54,3 +54,5 @@ if __name__ == "__main__":
     It is widely used in web development, data analysis, and artificial intelligence.
     Python is loved by developers for its simplicity and readability.
     """
+       analysis_results = analyze_text(sample_text)
+    save_report(analysis_results)
