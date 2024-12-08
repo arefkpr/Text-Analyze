@@ -47,3 +47,10 @@ def save_report(results, filename="text_analysis_report.txt"):
         file.write(f"Longest Word: {results['longest_word']}\n")
         file.write(f"Readability Score: {results['readability_score']:.2f}\n")
     print(f"Report saved to {filename}")
+
+if __name__ == "__main__":
+    sample_text = """
+    Python is a high-level, general-purpose programming language.
+    It is widely used in web development, data analysis, and artificial intelligence.
+    Python is loved by developers for its simplicity and readability.
+    """
