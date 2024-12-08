@@ -32,3 +32,18 @@ def analyze_text(text):
         "longest_word": longest_word,
         "readability_score": readability_score
     }
+
+def save_report(results, filename="text_analysis_report.txt"):
+    with open(filename, "w", encoding="utf-8") as file:
+        file.write("Text Analysis Report\n")
+        file.write("====================\n")
+        file.write(f"Total Words: {results['word_count']}\n")
+        file.write(f"Total Sentences: {results['sentence_count']}\n")
+        file.write("Most Common Words:\n")
+        for word, count in results["most_common_words"]:
+            file.write(f"  - {word}: {count} times\n")
+        file.write(f"Most Frequent Word: {results['most_frequent_word']} ({results['most_frequent_count']} times)\n")
+        file.write(f"Shortest Word: {results['shortest_word']}\n")
+        file.write(f"Longest Word: {results['longest_word']}\n")
+        file.write(f"Readability Score: {results['readability_score']:.2f}\n")
+    print(f"Report saved to {filename}")
