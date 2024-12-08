@@ -21,3 +21,14 @@ def analyze_text(text):
     
     # Calculate readability score
     readability_score = flesch_reading_ease(text)
+
+  return {
+        "word_count": num_words,
+        "sentence_count": num_sentences,
+        "most_common_words": most_common_words,
+        "most_frequent_word": most_frequent_word,
+        "most_frequent_count": most_frequent_count,
+        "shortest_word": shortest_word,
+        "longest_word": longest_word,
+        "readability_score": readability_score
+    }
