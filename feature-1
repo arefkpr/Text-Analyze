@@ -1,0 +1,15 @@
+import re
+
+def find_palindromes(text):
+    words = re.findall(r'\b\w+\b', text)
+    palindromes = [word for word in words if word.lower() == word.lower()[::-1] and len(word) > 1]
+    return set(palindromes)
+
+# Example usage
+if name == "main":
+    sample_text = """
+    Anna went to the civic center and saw her friend Bob. Later, she read a radar report.
+    """
+    palindromes = find_palindromes(sample_text)
+    print("Palindromes found:")
+    print(", ".join(palindromes))
